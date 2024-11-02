@@ -50,7 +50,7 @@ spec:
           type: string
           enum:
             - Openshift
-            - Quay
+            - harbor
       dependencies:
         image_registry:
           oneOf:
@@ -71,17 +71,17 @@ spec:
             - properties:
                 image_registry:
                   enum:
-                    - Quay
+                    - harbor
                 image_host:
                   title: Image Host
                   type: string
                   description: Host for storing image
-                  default: quay-pp72k.apps.cluster-pm7qq.sandbox2308.opentlc.com
+                  default: harbor:80
                 image_organization:
                   title: Organization
                   type: string
-                  description: Name of the Quay Organization
-                  default: quayadmin
+                  description: Name of the Harbor Organization
+                  default: admin
                 image_tag:
                   title: Image Tag
                   default: latest
